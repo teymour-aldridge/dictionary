@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 
+import htmlmin
 from skua.files import FindFilesByExtension, calculate_save_location
 from skua.render import Templates
 
@@ -10,6 +11,7 @@ for file in file_finder():
     json_file = json.load(file.open())
     for (key, value) in json_file.items():
         output = templates.render_template('dict_entry', **value)
+        output = htmlmin.minify(output)
         word: str = value['word']
         word = word.replace('#', 'hash')
         word = word.replace('?', 'question-mark')
