@@ -1,6 +1,5 @@
 import json
 from pathlib import Path
-import jinja2
 
 from skua.files import FindFilesByExtension, calculate_save_location
 from skua.render import Templates
