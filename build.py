@@ -12,7 +12,7 @@ for file in file_finder():
         output = templates.render_template('dict_entry', **value)
         word: str = value['word']
         word = word.replace('#', 'hash')
-        word = word.replace('', 'question-mark')
+        word = word.replace('?', 'question-mark')
         word = word.replace('/', '')
         word = word.replace(' ', '-')
         save_location = calculate_save_location(Path('src/' + word), Path('src'), Path('build'))
