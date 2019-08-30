@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Entry: {{ word }} {% if speech_part %}({{ speech_part }}){% endif %}</h1>
+    <h4>Definitions</h4>
+    <ul>
+        {% for meaning in meanings %}
+            <li>
+                <ul>
+                    <li>{{ loop.index }}: {{ meaning['def'] }}</li>
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

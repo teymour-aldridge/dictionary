@@ -1,0 +1,4 @@
+[build]
+base=""
+publish="build/"
+command="source venv/bin/activate; python build.py"
