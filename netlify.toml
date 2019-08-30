@@ -1,4 +1,4 @@
 [build]
 base=""
 publish="build/"
-command="source venv/bin/activate; python build.py"
+command="source venv/bin/activate; python3.7 build.py"
