@@ -1,4 +1,4 @@
 [build]
 base=""
 publish="build/"
-command="source venv/bin/activate; python3.7 build.py"
+command="pip3.7 install -r requirements.txt; python3.7 build.py"
