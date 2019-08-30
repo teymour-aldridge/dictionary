@@ -11,4 +11,14 @@
             </li>
         {% endfor %}
     </ul>
+    <h4>Synonyms</h4>
+    <ul>
+        {% for meaning in meanings %}
+            <li>
+                <ul>
+                    <li>{{ loop.index }}: {{ meaning['def'] }}</li>
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock %}
